@@ -9,7 +9,7 @@ module.exports = function request(options) {
                 data += chunk;
             });
             res.on('end', () =>{
-                resolve(JSON.parse(data).statuses);
+                resolve(JSON.parse(data));
             })
         })
         req.on('error', (err) =>{
